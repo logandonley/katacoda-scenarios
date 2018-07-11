@@ -24,9 +24,14 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe"
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "uilayout": "terminal-iframe",
+    "hideintro": false,
+    "hidefinish": false
   },
   "backend": {
-    "imageid": "openshift"
+    "imageid": "openshift",
+    "port": 8443
   }
 }
