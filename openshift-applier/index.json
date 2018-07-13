@@ -1,38 +1,39 @@
 {
-  "title": "OpenShift-Applier",
-  "description": "This is a quick look at the OpenShift-Applier.",
-  "details": {
-    "steps": [
-      {
-        "title": "Step 1",
-        "text": "step1.md"
-      },
-      {
-        "title": "Step 2",
-        "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
-      }
-    ],
-    "intro": {
-      "text": "intro.md",
-      "courseData": "env-init.sh"
+    "icon": "fa-openshift",
+    "title": "Intro to OpenShift-Applier",
+    "description": "",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "backend": {
+        "trainingid": "openshift-3-9",
+        "imageid": "openshift",
+        "port": 8443
     },
-    "finish": {
-      "text": "finish.md"
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Step 1",
+            "text": "step1.md"
+        }, {
+            "title": "Step 2",
+            "text": "step2.md"
+        }, {
+            "title": "Step 3",
+            "text": "step3.md"
+        }],
+        "intro": {
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
     }
-  },
-  "environment": {
-    "showdashboard": true,
-    "dashboard": "Dashboard",
-    "uilayout": "terminal-iframe",
-    "hideintro": false,
-    "hidefinish": false
-  },
-  "backend": {
-    "imageid": "openshift",
-    "port": 8443
-  }
 }
