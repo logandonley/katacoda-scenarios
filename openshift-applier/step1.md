@@ -14,8 +14,8 @@ To begin, let's create a new directory and go into it.
 ```
 cat <<EOM >requirements.yml
 - name: openshift-applier
-  scm: git
-  src: https://github.com/redhat-cop/openshift-applier
-  version: v3.7.2
+    scm: git
+    src: https://github.com/redhat-cop/openshift-applier
+    version: v3.7.2
 EOM
 ```{{execute}}
