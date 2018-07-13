@@ -16,6 +16,6 @@ cat <<EOM >requirements.yml
 - name: openshift-applier
     scm: git
     src: https://github.com/redhat-cop/openshift-applier
-    version: v3.7.2
+    version: v3.9.0
 EOM
 ```{{execute}}
