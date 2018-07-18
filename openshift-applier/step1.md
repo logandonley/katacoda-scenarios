@@ -19,3 +19,25 @@ cat <<EOM >requirements.yml
     version: v3.9.0
 EOM
 ```{{execute}}
+
+To complete the generic project structure, we want to create the rest of these:
+
+```
+.
+├── inventory
+│   ├── group_vars
+│   │   └── all.yml
+│   ├── hosts
+│   └── host_vars
+│       ├── application.yml
+│       └── bootstrap.yml
+├── params
+├── projectrequests
+├── requirements.yml
+└── templates
+```
+
+```
+mkdir -p inventory/{group_vars,host_vars} params projectrequests templates
+touch inventory/group_vars/all.yml inventory/host_vars/{application.yml,bootstrap.yml} inventory/hosts
+```{{execute}}
