@@ -22,5 +22,5 @@ You'll notice at the end of the template, there is a parameters section with onl
 
 ```
 mkdir params/ruby
-cat 'BUILD_NAMESPACE={{ dev.namespace }}' > params/ruby/build
+echo 'BUILD_NAMESPACE={{ dev.namespace }}' > params/ruby/build
 ```{{execute}}
