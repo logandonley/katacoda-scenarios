@@ -12,7 +12,10 @@ ruby-example-template                 1 (1 blank)   6
 
 `ruby-example-template` is the name of the template we're going to pull down as a template file into the `templates` directory.
 
-``oc get template ruby-example-template -n openshift -o yaml > templates/ruby.yml``{{execute}}
+```
+mkdir templates/app
+oc get template ruby-example-template -n openshift -o yaml > templates/app/ruby.yml
+```{{execute}}
 
 To checkout what the template looks like, run the following:
 
@@ -49,9 +52,32 @@ openshift_cluster_content:
     content:
     - name: ruby-ex
       template: "{{ playbook_dir }}/templates/app/ruby.yml"
-      params: "{{ playbook_dir }}/params/app/ruby"
+      params: "{{ playbook_dir }}/params/ruby/build"
       namespace: "{{ dev.namespace }}"
       tags:
       - app
 EOM
+```{{execute}}
+
+Awesome, we're almost ready to run this! First we need to create the OpenShift project/namespace where the application will run.
+
+```
+mkdir params/projectrequests
+echo 'NAMESPACE={{ item.namespace }}\nNAMESPACE_DISPLAY_NAME={{ item.display_name }}' > params/projectrequests/project
+```{{execute}}
+
+```
+cat <<EOM >inventory/host_vars/application.yml
+---
+ansible_connection: local
+openshift_cluster_content:
+- object: projects
+    content:
+    - name: dev
+      template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
+      template_action: create
+      params: "{{ playbook_dir }}/params/projectrequests/{{ dev.namespace }}"
+      tags:
+      - projectrequests
+      - projectrequests-dev
 ```{{execute}}
