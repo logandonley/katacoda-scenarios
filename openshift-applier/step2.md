@@ -19,7 +19,7 @@ oc get template ruby-example-template -n openshift -o yaml > templates/app/ruby.
 
 To checkout what the template looks like, run the following:
 
-``cat templates/ruby.yml``{{execute}}
+``cat templates/app/ruby.yml``{{execute}}
 
 You'll notice at the end of the template, there is a parameters section with only parameter: `BUILD_NAMESPACE`. We'll want to create a parameter file to set this value.
 
@@ -67,7 +67,7 @@ echo 'NAMESPACE={{ item.namespace }}\nNAMESPACE_DISPLAY_NAME={{ item.display_nam
 ```{{execute}}
 
 ```
-cat <<EOM >inventory/host_vars/application.yml
+cat <<EOM >inventory/host_vars/bootstrap.yml
 ---
 ansible_connection: local
 openshift_cluster_content:
@@ -80,4 +80,5 @@ openshift_cluster_content:
       tags:
       - projectrequests
       - projectrequests-dev
+EOM
 ```{{execute}}
