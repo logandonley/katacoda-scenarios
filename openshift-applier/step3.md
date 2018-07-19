@@ -14,3 +14,13 @@ EOM
 ```{{execute}}
 
 You can see this `{{ target }}` variable being called here. It's purpose is to allow you to run specific portions of the inventory if you want. 
+
+Now we are ready to run!
+
+First pull down the ansible-galaxy requirements into the `roles` directory:
+
+``ansible-galaxy install -r requirements.yml -p roles``{{execute}}
+
+Then start the run:
+
+``ansible-playbook -i inventory apply.yml -e "target=bootstrap,application"``{{execute}}

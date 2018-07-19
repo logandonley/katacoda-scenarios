@@ -14,7 +14,7 @@ ruby-example-template                 1 (1 blank)   6
 
 ```
 mkdir templates/app
-oc get template ruby-example-template -n openshift -o yaml > templates/app/ruby.yml
+oc export template ruby-example-template -n openshift -o yaml > templates/app/ruby.yml
 ```{{execute}}
 
 To checkout what the template looks like, run the following:
@@ -53,7 +53,10 @@ Awesome, we're almost ready to run this! First we need to create the OpenShift p
 
 ```
 mkdir params/projectrequests
-echo 'NAMESPACE=ruby-example\nNAMESPACE_DISPLAY_NAME="Ruby Example"' > params/projectrequests/project
+cat <<EOM >params/projectrequests/project
+NAMESPACE=ruby-example
+NAMESPACE_DISPLAY_NAME="Ruby Example"
+EOM
 ```{{execute}}
 
 ```
