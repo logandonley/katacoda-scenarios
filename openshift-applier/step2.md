@@ -24,3 +24,14 @@ You'll notice at the end of the template, there is a parameters section with onl
 mkdir params/ruby
 echo 'BUILD_NAMESPACE={{ dev.namespace }}' > params/ruby/build
 ```{{execute}}
+
+In this BUILD_NAMESPACE we call on an Ansible variable called `dev.namespace`. Now we need to define this.
+
+```
+cat <<EOM >inventory/group_vars/all.yml
+---
+dev:
+  namespace: ruby-dev
+  display_name: Ruby Dev
+EOM
+```{{execute}}
