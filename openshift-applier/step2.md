@@ -4,3 +4,16 @@ First you'll need to find the name of the template you want to pull in:
 
 ``oc get templates -n openshift``{{execute}}
 
+You should see the following output:
+```
+NAME                    DESCRIPTION   PARAMETERS    OBJECTS
+ruby-example-template                 1 (1 blank)   6
+```
+
+`ruby-example-template` is the name of the template we're going to pull down as a template file into the `templates` directory.
+
+``oc get template ruby-example-template -n openshift -o yaml > templates/ruby.yml``{{execute}}
+
+To checkout what the template looks like, run the following:
+
+``cat templates/ruby.yml``{{execute}}
