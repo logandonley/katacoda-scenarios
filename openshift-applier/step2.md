@@ -17,3 +17,10 @@ ruby-example-template                 1 (1 blank)   6
 To checkout what the template looks like, run the following:
 
 ``cat templates/ruby.yml``{{execute}}
+
+You'll notice at the end of the template, there is a parameters section with only parameter: `BUILD_NAMESPACE`. We'll want to create a parameter file to set this value.
+
+```
+mkdir params/ruby
+cat 'BUILD_NAMESPACE={{ dev.namespace }}' > params/ruby/build`
+```{{execute}}
