@@ -46,12 +46,12 @@ cat <<EOM >inventory/host_vars/application.yml
 ansible_connection: local
 openshift_cluster_content:
 - object: ruby-components
-  content:
-  - name: ruby-ex
-    template: "{{ playbook_dir }}/templates/app/ruby.yml"
-    params: "{{ playbook_dir }}/params/app/ruby"
-    namespace: "{{ dev.namespace }}"
-    tags:
-    - app
+    content:
+    - name: ruby-ex
+      template: "{{ playbook_dir }}/templates/app/ruby.yml"
+      params: "{{ playbook_dir }}/params/app/ruby"
+      namespace: "{{ dev.namespace }}"
+      tags:
+      - app
 EOM
 ```{{execute}}
