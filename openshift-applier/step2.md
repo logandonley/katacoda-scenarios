@@ -43,7 +43,7 @@ openshift_cluster_content:
     - name: ruby-ex
       template: "{{ playbook_dir }}/templates/app/ruby.yml"
       params: "{{ playbook_dir }}/params/ruby/build"
-      namespace: "{{ dev.namespace }}"
+      namespace: "{{ ruby_namespace }}"
       tags:
       - app
 EOM
@@ -66,7 +66,7 @@ openshift_cluster_content:
     - name: dev
       template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
       template_action: create
-      params: "{{ playbook_dir }}/params/projectrequests/{{ dev.namespace }}"
+      params: "{{ playbook_dir }}/params/projectrequests/{{ ruby_namespace }}"
       tags:
       - projectrequests
       - projectrequests-dev
