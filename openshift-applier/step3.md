@@ -4,10 +4,10 @@ Before we can run this, we need to create a playbook which will call the OpenShi
 cat <<EOM >apply.yml
 ---
 - name: Deploy {{ target }} 
-  hosts: "{{ target }}"
-  tasks:
-    - include_role:
-        name: openshift-applier/roles/openshift-applier
+    hosts: "{{ target }}"
+    tasks:
+      - include_role:
+          name: openshift-applier/roles/openshift-applier
 EOM
 ```{{execute}}
 
