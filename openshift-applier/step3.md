@@ -5,6 +5,9 @@ cat <<EOM >apply.yml
 ---
 - name: Deploy {{ target }} 
     hosts: "{{ target }}"
+    vars:
+      dev:
+        namespace: "ruby-example"
     tasks:
       - include_role:
           name: openshift-applier/roles/openshift-applier
