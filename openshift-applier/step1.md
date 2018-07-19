@@ -38,6 +38,8 @@ To complete the generic project structure, we want to create the rest of these:
 ```
 
 ```
-mkdir -p inventory/{group_vars,host_vars} params projectrequests templates
+mkdir -p inventory/{group_vars,host_vars} params templates
 touch inventory/group_vars/all.yml inventory/host_vars/{application.yml,bootstrap.yml} inventory/hosts
 ```{{execute}}
+
+In the next step we'll start populating the inventory.
