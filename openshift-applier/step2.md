@@ -30,7 +30,7 @@ In this BUILD_NAMESPACE we call on an Ansible variable called `dev.namespace`. N
 ```
 cat <<EOM >inventory/group_vars/all.yml
 ---
-dev:
+- dev:
     namespace: ruby-dev
     display_name: Ruby Dev
 EOM
