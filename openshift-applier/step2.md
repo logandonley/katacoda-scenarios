@@ -25,19 +25,9 @@ You'll notice at the end of the template, there is a parameters section with onl
 
 ```
 mkdir params/ruby
-echo 'BUILD_NAMESPACE={{ dev.namespace }}' > params/ruby/build
+echo 'BUILD_NAMESPACE=ruby-example' > params/ruby/build
 ```{{execute}}
 
-In this BUILD_NAMESPACE we call on an Ansible variable called `dev.namespace`. Now we need to define this.
-
-```
-cat <<EOM >inventory/group_vars/all.yml
----
-- dev:
-    namespace: ruby-dev
-    display_name: Ruby Dev
-EOM
-```{{execute}}
 
 Next we need to create the `openshift_cluster_content` to tell it to create OpenShift objects from the template and parameters.
 
@@ -63,7 +53,7 @@ Awesome, we're almost ready to run this! First we need to create the OpenShift p
 
 ```
 mkdir params/projectrequests
-echo 'NAMESPACE={{ item.namespace }}\nNAMESPACE_DISPLAY_NAME={{ item.display_name }}' > params/projectrequests/project
+echo 'NAMESPACE=ruby-example\nNAMESPACE_DISPLAY_NAME="Ruby Example"' > params/projectrequests/project
 ```{{execute}}
 
 ```
@@ -82,3 +72,17 @@ openshift_cluster_content:
       - projectrequests-dev
 EOM
 ```{{execute}}
+
+To finish up the inventory, we need to update the hosts file to include the host_vars we just created.
+
+```
+cat <<EOM >inventory/hosts
+[bootstrap]
+bootstrap
+
+[application]
+application
+EOM
+```{{execute}}
+
+In the next step we'll create the playbook and then run it.
