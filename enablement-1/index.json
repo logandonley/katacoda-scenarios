@@ -16,14 +16,26 @@
     },
     "details": {
         "steps": [{
-            "title": "Step 1",
-            "text": "step1.md"
+            "title": "Part 1",
+            "text": "part1.md"
         }, {
-            "title": "Step 2",
-            "text": "step2.md"
+            "title": "Part 2",
+            "text": "part2.md"
         }, {
-            "title": "Step 3",
-            "text": "step3.md"
+            "title": "Part 3",
+            "text": "part3.md"
+        }, {
+            "title": "Part 4",
+            "text": "part4.md"
+        }, {
+            "title": "Part 5",
+            "text": "part5.md"
+        }, {
+            "title": "Part 6",
+            "text": "part6.md"
+        }, {
+            "title": "Part 7",
+            "text": "part7.md"
         }],
         "intro": {
             "courseData": "env-init.sh",
