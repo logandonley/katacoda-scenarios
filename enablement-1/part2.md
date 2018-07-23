@@ -9,7 +9,7 @@ The template contains all the things needed to setup a persistent nexus server, 
 4. Add some parameters for running the template by creating a new file in the `params` directory.
 ```
 touch params/nexus
-```
+```{{execute}}
 
 4. The essential params to include in this file are:
 ```
@@ -40,7 +40,7 @@ openshift_cluster_content:
 ansible-playbook apply.yml -e target=tools \
      -i inventory/ \
      -e "filter_tags=nexus"
-```
+```{{execute}}
 
 4. Once successful; login to the cluster through the browser (using cluster URL) and navigate to the `<YOUR_NAME>-ci-cd`. You should see Nexus up and running. You can login with default credentials (admin / admin123) 
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/nexus-up-and-running.png" alt="nexus-up-and-running" width="600px"/>

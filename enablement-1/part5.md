@@ -3,7 +3,7 @@
 5. Add the Jenkins Build & Deployment configs to the `enablement-ci-cd` repo by merging the contents `exercise1/jenkins` in
 ```
 git checkout exercise1/jenkins templates/jenkins.yml
-```
+```{{execute}}
 The Jenkins template is essentially the standard persistent Jenkins one with OpenShift.
 
 5. As before; create a new set of params by creating a `params/jenkins` file and adding some overrides to the template and updating the `<YOUR_NAME>` value accordingly.
@@ -29,7 +29,7 @@ This configuration, if applied now, will create the deployment configuration nee
 5. To create this image we will take the supported OpenShift Jenkins Image and bake into it some extra configuration using an [s2i](https://github.com/openshift/source-to-image) builder image. More information on Jenkins s2i is found on the [openshift/jenkins](https://github.com/openshift/jenkins#installing-using-s2i-build) GitHub page. To create an s2i configuration for Jenkins, check out the pre-canned configuration source in the `enablement-ci-cd` repo
 ```
 git checkout exercise1/jenkins-s2i jenkins-s2i
-```
+```{{execute}}
 The structure of the Jenkins s2i config is
 ```
 jenkins-s2i
@@ -107,13 +107,13 @@ Note in a residency we would not use your GitCredentials for pushing and pulling
 5. Commit your code to your GitLab instance
 ```
 git add .
-```
+```{{execute}}
 ```
 git commit -m "Adding Jenkins and Jenkins s2i"
-```
+```{{execute}}
 ```
 git push
-```
+```{{execute}}
 
 5.  In order for Jenkins to be able to run `npm` builds and installs we must configure a `jenkins-build-slave` for Jenkins to use. This slave will be dynamically provisioned when we run a build. It needs to have NodeJS and npm installed in it. These slaves can take a time to build themselves so to speed up we have placed the slave within OpenShift and you can use the following commands to be able to use them in your project.
 ```
@@ -121,10 +121,10 @@ oc project <YOUR_NAME>-ci-cd
 ```
 ```
 oc tag openshift/jenkins-slave-npm:latest jenkins-slave-npm:latest
-```
+```{{execute}}
 ```
 oc label is jenkins-slave-npm role=jenkins-slave
-```
+```{{execute}}
 This is pulling the container image into your namespace and then adding a label which will allow Jenkins to take notice of it. Don't worry if the label is already there and this last command fails!
 
 5. Now your code is commited, and you have bought in the Jenkins slave; run the OpenShift Applier to add the config to the cluster
@@ -132,7 +132,7 @@ This is pulling the container image into your namespace and then adding a label 
 ansible-playbook apply.yml -e target=tools \
      -i inventory/ \
      -e "filter_tags=jenkins"
-```
+```{{execute}}
 
 5. This will trigger a build of the s2i and when it's complete it will add an imagestream of `<YOUR_NAME>-ci-cd/jenkins:latest` to the project. The Deployment config should kick in and deploy the image once it arrives. You can follow the build of the s2i by going to the OpenShift console's project
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/jenkins-s2i-log.png" alt="jenkins-s2i-log" width="600px"/>

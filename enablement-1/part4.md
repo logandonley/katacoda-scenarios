@@ -20,20 +20,20 @@ git checkout exercise1/mongodb params/mongodb templates/mongodb.yml
 4. Git commit your updates to the inventory to git for traceability.
 ```
 git add .
-```
+```{{execute}}
 ```
 git commit -m "ADD - mongodb for use in the pipeline"
-```
+```{{execute}}
 ```
 git push
-```
+```{{execute}}
 
 4. Apply this change as done previously using Ansible. The deployment can be validated by going to your `<YOUR_NAME>-ci-cd` namespace and checking if it is there!
 ```
 ansible-playbook apply.yml -e target=tools \
   -i inventory/ \
   -e "filter_tags=mongodb"
-```
+```{{execute}}
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise3/ocp-mongo.png" alt="ocp-mongo" width="600px"/>
 
 

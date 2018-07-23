@@ -3,7 +3,7 @@
 3. In this course three different git projects will be created. To setup your local machine for each of these, create a new folder on the terminal in the root of your HOME directory for convenience. To do this, open a new Terminal session and create the new folder using the following command (new terminal sessions will start in your HOME dir).
 ```
 mkdir -p ~/innovation-labs && cd ~/innovation-labs
-```
+```{{execute}}
 <p class="tip">
 NOTE - If you do not want to have this folder at the root of your home dir that's fine, just ensure any parent directories of this `innovation-labs` folder do NOT have any spaces in them as it breaks Ansible in later labs...
 </p>
@@ -11,10 +11,10 @@ NOTE - If you do not want to have this folder at the root of your home dir that'
 3. Clone the scaffold project to your local machine's `innovation-labs` folder and pull all remote branches for use in later exercises. Note - this may error saying `fatal: A branch named 'develop' already exists.` but it can be ignored
 ```
 git clone https://github.com/rht-labs/enablement-ci-cd && cd enablement-ci-cd
-```
+```{{execute}}
 ```
 ./git-pull-all.sh
-```
+```{{execute}}
 
 3. Open the `innovation-labs` folder in VSCode (or your favourite editor). The project is laid out as follows
 ```
@@ -64,7 +64,7 @@ NOTE - yaml is indentation sensitive so keep things lined up properly!
   * Create another two params files `params/project-requests-dev` & `params/project-requests-test`. On the terminal run
 ```
 touch params/project-requests-dev params/project-requests-test
-```
+```{{execute}}
   * In your editor; Open `params/project-requests-dev` and add the following by substituting `<YOUR_NAME>` accordingly
 ```
 NAMESPACE=<YOUR_NAME>-dev
@@ -97,7 +97,7 @@ NAMESPACE_DISPLAY_NAME=<YOUR-NAME> Test
 3. With the configuration in place; install the OpenShift Applier dependency
 ```
 ansible-galaxy install -r requirements.yml --roles-path=roles
-```
+```{{execute}}
 
 3. Apply the inventory by logging into OpenShift on the terminal and running the playbook as follows (<CLUSTER_URL> should be replaced with the one you've been sent as shown below). Accept any insecure connection warning 👍:
 ```
@@ -105,7 +105,7 @@ oc login <OCP URL PROVIDED DURING ENABLEMENT>
 ```
 ```
 ansible-playbook apply.yml -i inventory/ -e target=bootstrap
-```
+```{{execute}}
 where the `-e target=bootstrap` is passing an additional variable specifying that we run the `bootstrap` inventory
 
 3. Once successful you should see an output similar to this (Cows not included): 
@@ -115,5 +115,5 @@ where the `-e target=bootstrap` is passing an additional variable specifying tha
 3. You can check to see the projects have been created successfully by running
 ```
 oc projects
-```
+```{{execute}}
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/project-success.png" alt="project-success" width="600px"/>

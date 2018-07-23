@@ -53,7 +53,7 @@ where the following need to be replaced by actual values:
 ansible-playbook apply.yml -e target=tools \
      -i inventory/ \
      -e "filter_tags=gitlab"
-```
+```{{execute}}
 
 4. Once successful; login to the cluster and navigate to the `<YOUR_NAME>-ci-cd`. You should see GitLab up and running.
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/gitlab-up-and-running.png" alt="gitlab-up-and-running" width="600px"/>
@@ -86,10 +86,10 @@ git remote set-url origin <GIT_URL>
 ```
 ```
 git add .
-```
+```{{execute}}
 ```
 git commit -m "Adding git and nexus config"
-```
+```{{execute}}
 ```
 git push -u origin --all
-```
+```{{execute}}

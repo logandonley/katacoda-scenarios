@@ -3,13 +3,13 @@
 7. Commit your code to the new repo in GitLab
 ```
 git add .
-```
+```{{execute}}
 ```
 git commit -m "ADD - all ci/cd contents"
-```
+```{{execute}}
 ```
 git push
-```
+```{{execute}}
 
 7. Burn your OCP content to the ground
 ```
