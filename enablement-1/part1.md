@@ -58,7 +58,7 @@ NOTE - yaml is indentation sensitive so keep things lined up properly!
 3. Open the `inventory/host_vars/projects-and-policies.yml` file; you should see some variables setup already to create the `<YOUR_NAME>-ci-cd` namespace. This object is passed to the OpenShift Applier to call the `templates/project-requests.yml` template with the `params/project-requests-ci-cd` parameters. We will add some additional content here but first let's explore the parameters and the template
 
 3. Open the `params/project-requests-ci-cd` and replace the `<YOUR_NAME>` with your name to create the corresponding projects in the cluster.
-![new-item](../images/exercise1/ci-cd-project-namespace.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/ci-cd-project-namespace.png" alt="new-item" width="600px"/>
 
 3. Let's add two more params files to pass to our template to be able to create a `dev` and `test` project.
   * Create another two params files `params/project-requests-dev` & `params/project-requests-test`. On the terminal run
@@ -91,7 +91,8 @@ NAMESPACE_DISPLAY_NAME=<YOUR-NAME> Test
       tags:
       - projects
 ```
-![project-request-yaml](../images/exercise1/project-request-yml.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/project-request-yml.png" alt="project-request-yaml" width="600px"/>
+
 
 3. With the configuration in place; install the OpenShift Applier dependency
 ```bash
@@ -107,10 +108,12 @@ ansible-playbook apply.yml -i inventory/ -e target=bootstrap
 ```
 where the `-e target=bootstrap` is passing an additional variable specifying that we run the `bootstrap` inventory
 
-3. Once successful you should see an output similar to this (Cows not included): ![playbook-success](../images/exercise1/play-book-success.png)
+3. Once successful you should see an output similar to this (Cows not included): 
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/play-book-success.png" alt="playbook-success" width="600px"/>
+
 
 3. You can check to see the projects have been created successfully by running
 ```bash
 oc projects
 ```
-![project-success](../images/exercise1/project-success.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/project-success.png" alt="project-success" width="600px"/>

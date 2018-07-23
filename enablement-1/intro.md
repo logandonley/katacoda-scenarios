@@ -33,9 +33,7 @@ As a learner you will be able to
 ## Big Picture
 > The Big Picture is our emerging architecture; starting with an empty cluster we populate it with projects and some ci/cd tooling.
 
-![big-picture](https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/big-picture/big-picture-1.jpg)
-
-<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/big-picture/big-picture-1.jpg" alt="big-picture" width="400px"/>
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/big-picture/big-picture-1.jpg" alt="big-picture" width="600px"/>
 
 
 _____
