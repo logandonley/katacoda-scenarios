@@ -14,7 +14,8 @@ git checkout exercise1/mongodb params/mongodb templates/mongodb.yml
     tags:
     - mongodb
 ```
-![jenkins-mongo](../images/exercise1/jenkins-mongo.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/jenkins-mongo.png" alt="jenkins-mongo" width="600px"/>
+
 
 4. Git commit your updates to the inventory to git for traceability.
 ```bash
@@ -33,6 +34,7 @@ ansible-playbook apply.yml -e target=tools \
   -i inventory/ \
   -e "filter_tags=mongodb"
 ```
-![ocp-mongo](../images/exercise3/ocp-mongo.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/ocp-mongo.png" alt="ocp-mongo" width="600px"/>
+
 
 **Note - When making changes to enablement-ci-cd you should frequently commit the changes to git.**

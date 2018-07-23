@@ -54,7 +54,8 @@ jenkins-s2i
 ```txt
 greenballs:1.15
 ```
-![green-balls.png](../images/exercise1/green-balls.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/green-balls.png" alt="green-balls" width="600px"/>
+
 Why does Jenkins have Blue Balls? More can be found [on reddit](https://www.reddit.com/r/programming/comments/4lu6q8/why_does_jenkins_have_blue_balls/) or the [jenkins blog](https://jenkins.io/blog/2012/03/13/why-does-jenkins-have-blue-balls/)
 
 5. Before building and deploying the Jenkins s2i; add git credentials to it. These will be used by Jenkins to access the Git Repositories where our apps will be stored. We want Jenkins to be able to push tags to it so write access is required. There are a few ways we can do this; either adding them to the `template/jenkins.yml` as environment Variables and then including them in the `params/jenkins` file.  We could also create a token in GitLab and use it as the source secret in the Jenkins template.
@@ -134,6 +135,7 @@ ansible-playbook apply.yml -e target=tools \
 ```
 
 5. This will trigger a build of the s2i and when it's complete it will add an imagestream of `<YOUR_NAME>-ci-cd/jenkins:latest` to the project. The Deployment config should kick in and deploy the image once it arrives. You can follow the build of the s2i by going to the OpenShift console's project
-![jenkins-s2i-log](../images/exercise1/jenkins-s2i-log.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/jenkins-s2i-log.png" alt="jenkins-s2i-log" width="600px"/>
+
 
 5. When the Jenkins deployment has completed; login (using your OpenShift credentials) and accept the role permissions. You should now see a fairly empty Jenkins with just the seed job
