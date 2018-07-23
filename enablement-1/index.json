@@ -8,8 +8,6 @@
         "imageid": "ubuntu"
     },
     "environment": {
-        "showdashboard": true,
-        "dashboard": "Dashboard",
         "uilayout": "editor-terminal",
         "hideintro": false,
         "hidefinish": false
