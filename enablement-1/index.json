@@ -5,7 +5,7 @@
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "backend": {
-        "imageid": "redhat"
+        "imageid": "ubuntu"
     },
     "environment": {
         "showdashboard": true,
