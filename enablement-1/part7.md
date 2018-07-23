@@ -1,42 +1,42 @@
 > _In this section you will prove the infra as code is working by deleting your Cluster Content and recreating it all_
 
 7. Commit your code to the new repo in GitLab
-```bash
+```
 git add .
 ```
-```bash
+```
 git commit -m "ADD - all ci/cd contents"
 ```
-```bash
+```
 git push
 ```
 
 7. Burn your OCP content to the ground
-```bash
+```
 oc delete project <YOUR_NAME>-ci-cd
 ```
-```bash
+```
 oc delete project <YOUR_NAME>-dev
 ```
-```bash
+```
 oc delete project <YOUR_NAME>-test
 ```
 
 7. Check to see the projects that were marked for deletion are removed.
-```bash
+```
 oc get projects | egrep '<YOUR_NAME>-ci-cd|<YOUR_NAME>-dev|<YOUR_NAME>-test'
 ```
 
 7. Re-apply the inventory to re-create it all!
-```bash
+```
 oc login <OCP URL PROVIDED DURING ENABLEMENT>
 ```
-```bash
+```
 ansible-playbook apply.yml -i inventory/ -e target=bootstrap
 ```{{execute}}
-```bash
-ansible-playbook apply.yml -i inventory/ -e target=tools
 ```
+ansible-playbook apply.yml -i inventory/ -e target=tools
+```{{execute}}
 
 _____
 

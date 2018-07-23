@@ -4,7 +4,7 @@ NOTE - This section may already have been completed for you, please check with y
 </p>
 
 4. Now let's do the same thing for GitLab to get it up and running. Checkout the template and params provided by running
-```bash
+```
 git checkout exercise1/git-nexus templates/gitlab.yml params/gitlab
 ```
 Explore the template; it contains the PVC, buildConfig and services. The DeploymentConfig is made up of these apps
@@ -49,7 +49,7 @@ where the following need to be replaced by actual values:
 ```
 
 4. Run the OpenShift applier, specifying the tag `gitlab` to speed up its execution.
-```bash
+```
 ansible-playbook apply.yml -e target=tools \
      -i inventory/ \
      -e "filter_tags=gitlab"
@@ -73,23 +73,23 @@ Note - we would not normally make the project under your name but create a group
 </p>
 
 4. If you have not used Git before; you may need to tell Git who you are and what your email is before we commit. Run the following commands, substituting your email and "Your Name". If you've done this before move on to the next step.
-```bash
+```
 git config --global user.email "yourname@mail.com"
 ```
-```bash
+```
 git config --global user.name "Your Name"
 ```
 
 4. Commit your local project to this new remote by first removing the existing origin (github) where the Ansible project was cloned from in the first steps. Remember to substitute `<GIT_URL>` accordingly with the one created for your `enablement-ci-cd` repository a moment ago.
-```bash
+```
 git remote set-url origin <GIT_URL>
 ```
-```bash
+```
 git add .
 ```
-```bash
+```
 git commit -m "Adding git and nexus config"
 ```
-```bash
+```
 git push -u origin --all
 ```

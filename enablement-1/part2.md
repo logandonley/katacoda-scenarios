@@ -1,18 +1,18 @@
 > _Now that we have our Projects setup; we can start to populate them with Apps to be used in our dev lifecycle_
 
 4. In the `enablement-ci-cd` repo, checkout the templates for Nexus by running
-```bash
+```
 git checkout exercise1/git-nexus templates/nexus.yml
 ```
 The template contains all the things needed to setup a persistent nexus server, exposing a service and route while also creating the persistent volume needed. Have a read through the template; at the bottom you'll see a collection of parameters we will pass to the template.
 
 4. Add some parameters for running the template by creating a new file in the `params` directory.
-```bash
+```
 touch params/nexus
 ```
 
 4. The essential params to include in this file are:
-```bash
+```
 VOLUME_CAPACITY=5Gi
 MEMORY_LIMIT=1Gi
 ```
@@ -36,7 +36,7 @@ openshift_cluster_content:
 
 
 4. Run the OpenShift applier, specifying the tag `nexus` to speed up its execution (`-e target=tools` is to run the other inventory).
-```bash
+```
 ansible-playbook apply.yml -e target=tools \
      -i inventory/ \
      -e "filter_tags=nexus"
