@@ -1,0 +1,40 @@
+{
+    "icon": "fa-openshift",
+    "title": "The Manual Menace (01)",
+    "description": "",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "backend": {
+        "imageid": "ansible"
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "editor-terminal",
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Step 1",
+            "text": "step1.md"
+        }, {
+            "title": "Step 2",
+            "text": "step2.md"
+        }, {
+            "title": "Step 3",
+            "text": "step3.md"
+        }],
+        "intro": {
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": ".init.sh", "target": "~/", "chmod": "+x"}]
+        }
+    }
+}
