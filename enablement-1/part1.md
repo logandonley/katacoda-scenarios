@@ -79,17 +79,17 @@ NAMESPACE_DISPLAY_NAME=<YOUR-NAME> Test
 3. In the `inventory/host_vars/projects-and-policies.yml` file; add the new objects for the projects you want to create (dev & test) by adding another object to the content array for each. You can copy and paste them from the `ci-cd` example and update them accordingly. If you do this; remember to change the params file! e.g.
 ```yaml
     - name: "{{ dev_namespace }}"
-      template: "{{ playbook_dir }}/templates/project-requests.yml"
-      template_action: create
-      params: "{{ playbook_dir }}/params/project-requests-dev"
-      tags:
-      - projects
+       template: "{{ playbook_dir }}/templates/project-requests.yml"
+       template_action: create
+       params: "{{ playbook_dir }}/params/project-requests-dev"
+       tags:
+       - projects
     - name: "{{ test_namespace }}"
-      template: "{{ playbook_dir }}/templates/project-requests.yml"
-      template_action: create
-      params: "{{ playbook_dir }}/params/project-requests-test"
-      tags:
-      - projects
+       template: "{{ playbook_dir }}/templates/project-requests.yml"
+       template_action: create
+       params: "{{ playbook_dir }}/params/project-requests-test"
+       tags:
+       - projects
 ```
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/project-request-yml.png" alt="project-request-yaml" width="600px"/>
 

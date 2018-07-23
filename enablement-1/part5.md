@@ -95,13 +95,13 @@ Note in a residency we would not use your GitCredentials for pushing and pulling
 5. Create a new object `ci-cd-builds` in the Ansible `inventory/host_vars/ci-cd-tooling.yml` to drive the s2i build configuration.
 ```yaml
   - object: ci-cd-builds
-    content:
-    - name: "jenkins-s2i"
-      namespace: "{{ ci_cd_namespace }}"
-      template: "{{ playbook_dir }}/templates/jenkins-s2i.yml"
-      params: "{{ playbook_dir }}/params/jenkins-s2i"
-      tags:
-      - jenkins
+      content:
+      - name: "jenkins-s2i"
+        namespace: "{{ ci_cd_namespace }}"
+        template: "{{ playbook_dir }}/templates/jenkins-s2i.yml"
+        params: "{{ playbook_dir }}/params/jenkins-s2i"
+        tags:
+        - jenkins
 ```
 
 5. Commit your code to your GitLab instance

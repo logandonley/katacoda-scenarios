@@ -24,13 +24,13 @@ MEMORY_LIMIT=1Gi
 ansible_connection: local
 openshift_cluster_content:
 - object: ci-cd-tooling
-  content:
-  - name: "nexus"
-    namespace: "{{ ci_cd_namespace }}"
-    template: "{{ playbook_dir }}/templates/nexus.yml"
-    params: "{{ playbook_dir }}/params/nexus"
-    tags:
-    - nexus
+    content:
+    - name: "nexus"
+      namespace: "{{ ci_cd_namespace }}"
+      template: "{{ playbook_dir }}/templates/nexus.yml"
+      params: "{{ playbook_dir }}/params/nexus"
+      tags:
+      - nexus
 ```
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/ci-cd-deployments-yml.png" alt="ci-cd-deployments-yml" width="600px"/>
 

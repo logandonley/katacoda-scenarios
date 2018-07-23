@@ -8,11 +8,11 @@ git checkout exercise1/mongodb params/mongodb templates/mongodb.yml
 4. Open `enablement-ci-cd` in your favourite editor. Edit the `inventory/host_vars/ci-cd-tooling.yml` to include a new object for our mongodb as shown below. This item can be added below the Jenkins slave in the `ci-cd-tooling` section.
 ```yaml
   - name: "jenkins-mongodb"
-    namespace: "{{ ci_cd_namespace }}"
-    template: "{{ playbook_dir }}/templates/mongodb.yml"
-    params: "{{ playbook_dir }}/params/mongodb"
-    tags:
-    - mongodb
+      namespace: "{{ ci_cd_namespace }}"
+      template: "{{ playbook_dir }}/templates/mongodb.yml"
+      params: "{{ playbook_dir }}/params/mongodb"
+      tags:
+      - mongodb
 ```
 <img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/jenkins-mongo.png" alt="jenkins-mongo" width="600px"/>
 

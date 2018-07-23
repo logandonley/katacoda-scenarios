@@ -41,11 +41,11 @@ where the following need to be replaced by actual values:
 4. Create another object in the inventory `inventory/host_vars/ci-cd-tooling.yml` file to run the build & deploy of this template. Add the following and update the `namespace:` accordingly
 ```yaml
     - name: "gitlab"
-      namespace: "{{ ci_cd_namespace }}"
-      template: "{{ playbook_dir }}/templates/gitlab.yml"
-      params: "{{ playbook_dir }}/params/gitlab"
-      tags:
-      - gitlab
+        namespace: "{{ ci_cd_namespace }}"
+        template: "{{ playbook_dir }}/templates/gitlab.yml"
+        params: "{{ playbook_dir }}/params/gitlab"
+        tags:
+        - gitlab
 ```
 
 4. Run the OpenShift applier, specifying the tag `gitlab` to speed up its execution.
