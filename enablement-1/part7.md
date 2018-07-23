@@ -1,4 +1,3 @@
-### Part 7 - Live, Die, Repeat
 > _In this section you will prove the infra as code is working by deleting your Cluster Content and recreating it all_
 
 7. Commit your code to the new repo in GitLab

@@ -1,5 +1,3 @@
-### Part 3 - GitLab
-
 #### 3a - GitLab install
 <p class="tip">
 NOTE - This section may already have been completed for you, please check with your tutor. If this is the case, skip to section 3b "Commit CI/CD" below to add your code to GitLab.

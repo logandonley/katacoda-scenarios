@@ -1,4 +1,3 @@
-### Part 4 MongoDB for CI tests
 > In order to run our API tests in CI in later labs; we need there to be a MongoDB available for executing our tests. As this is part of our CI/CD Lifecycle; we will add it now.
 
 4. In our `enablement-ci-cd` repo; checkout the mongo templates as shown below to bring in the template and params. The mongodb template we're using is the same as the one for our `todolist-fe` created in previous exercise.

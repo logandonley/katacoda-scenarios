@@ -1,4 +1,3 @@
-### Part 1 - Create OpenShift Projects
 > _Using the OpenShift Applier, we will add new project namespaces to the cluster which will be used throughout the exercise._
 
 3. In this course three different git projects will be created. To setup your local machine for each of these, create a new folder on the terminal in the root of your HOME directory for convenience. To do this, open a new Terminal session and create the new folder using the following command (new terminal sessions will start in your HOME dir).

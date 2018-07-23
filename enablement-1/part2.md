@@ -1,4 +1,3 @@
-### Part 2 - Nexus
 > _Now that we have our Projects setup; we can start to populate them with Apps to be used in our dev lifecycle_
 
 4. In the `enablement-ci-cd` repo, checkout the templates for Nexus by running

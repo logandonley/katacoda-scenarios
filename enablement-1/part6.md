@@ -1,4 +1,3 @@
-### Part 6 - Jenkins Hello World
 > _To test things are working end-to-end; create a hello world job that doesn't do much but proves we can pull code from git and that our balls are green._
 
 6. Log in to Jenkins and hit `New Item` ![new-item](../images/exercise1/new-item.png).
