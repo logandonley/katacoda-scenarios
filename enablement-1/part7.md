@@ -29,11 +29,11 @@ oc get projects | egrep '<YOUR_NAME>-ci-cd|<YOUR_NAME>-dev|<YOUR_NAME>-test'
 
 7. Re-apply the inventory to re-create it all!
 ```bash
-oc login https://console.lader.rht-labs.com
+oc login <OCP URL PROVIDED DURING ENABLEMENT>
 ```
 ```bash
 ansible-playbook apply.yml -i inventory/ -e target=bootstrap
-```
+```{{execute}}
 ```bash
 ansible-playbook apply.yml -i inventory/ -e target=tools
 ```

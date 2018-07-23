@@ -34,7 +34,7 @@ ansible-playbook apply.yml -e target=tools \
   -i inventory/ \
   -e "filter_tags=mongodb"
 ```
-<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/ocp-mongo.png" alt="ocp-mongo" width="600px"/>
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise3/ocp-mongo.png" alt="ocp-mongo" width="600px"/>
 
 
 **Note - When making changes to enablement-ci-cd you should frequently commit the changes to git.**
