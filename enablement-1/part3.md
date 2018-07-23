@@ -55,15 +55,19 @@ ansible-playbook apply.yml -e target=tools \
      -e "filter_tags=gitlab"
 ```
 
-4. Once successful; login to the cluster and navigate to the `<YOUR_NAME>-ci-cd`. You should see GitLab up and running. ![gitlab-up-and-running](../images/exercise1/gitlab-up-and-running.png)
+4. Once successful; login to the cluster and navigate to the `<YOUR_NAME>-ci-cd`. You should see GitLab up and running.
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/gitlab-up-and-running.png" alt="gitlab-up-and-running" width="600px"/>
+
 
 #### 3b - Commit CI/CD
 
 4. Navigate to GitLab (if you have just skipped straight to this step; ask your tutor for the URL). You can login using your cluster credentials using the LDAP tab
-![gitlab-ui](../images/exercise1/gitlab-ui.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/gitlab-ui.png" alt="gitlab-ui" width="600px"/>
+
 
 4. Once logged in create a new project called `enablement-ci-cd` and mark it as internal. Once created; copy out the `git url` for use on the next step.
-![gitlab-new-project](../images/exercise1/gitlab-new-project.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/gitlab-new-project.png" alt="gitlab-new-project" width="600px"/>
+
 <p class="tip">
 Note - we would not normally make the project under your name but create a group and add the project there on residency but for simplicity of the exercise we'll do that here
 </p>

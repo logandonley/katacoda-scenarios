@@ -32,7 +32,8 @@ openshift_cluster_content:
     tags:
     - nexus
 ```
-![ci-cd-deployments-yml](../images/exercise1/ci-cd-deployments-yml.png)
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/ci-cd-deployments-yml.png" alt="ci-cd-deployments-yml" width="600px"/>
+
 
 4. Run the OpenShift applier, specifying the tag `nexus` to speed up its execution (`-e target=tools` is to run the other inventory).
 ```bash
@@ -41,4 +42,5 @@ ansible-playbook apply.yml -e target=tools \
      -e "filter_tags=nexus"
 ```
 
-4. Once successful; login to the cluster through the browser (using cluster URL) and navigate to the `<YOUR_NAME>-ci-cd`. You should see Nexus up and running. You can login with default credentials (admin / admin123) ![nexus-up-and-running](../images/exercise1/nexus-up-and-running.png)
+4. Once successful; login to the cluster through the browser (using cluster URL) and navigate to the `<YOUR_NAME>-ci-cd`. You should see Nexus up and running. You can login with default credentials (admin / admin123) 
+<img src="https://raw.githubusercontent.com/rht-labs/enablement-docs/master/exercises/images/exercise1/nexus-up-and-running.png" alt="nexus-up-and-running" width="600px"/>
