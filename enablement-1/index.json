@@ -5,7 +5,7 @@
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "backend": {
-        "imageid": "fedora"
+        "imageid": "centos"
     },
     "environment": {
         "showdashboard": true,
