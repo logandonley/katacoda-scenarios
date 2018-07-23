@@ -5,7 +5,7 @@
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "backend": {
-        "imageid": "docker"
+        "imageid": "fedora"
     },
     "environment": {
         "showdashboard": true,
